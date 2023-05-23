@@ -16,4 +16,6 @@
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
     <string name="gender">Gender</string>
+    <string name="users">All Users</string>
+    <string name="enterName">Enter Name</string>
 </resources>

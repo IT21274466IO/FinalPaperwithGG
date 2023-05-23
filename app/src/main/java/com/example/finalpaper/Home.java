@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.finalpaper.Database.DBHandler;
 
 public class Home extends AppCompatActivity {
 
@@ -27,6 +30,22 @@ public class Home extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), ProfileManagement.class);
                 startActivity(i);
+            }
+        });
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DBHandler dbHandler =  new DBHandler(getApplicationContext());
+               if ( dbHandler.loginUser(username.getText().toString(), password.getText().toString())) {
+                   Toast.makeText(Home.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
+                   Intent i = new Intent(getApplicationContext(), UserList.class);
+                   startActivity(i);
+               } else {
+                   Toast.makeText(Home.this, "Invalid User Credentials", Toast.LENGTH_SHORT).show();
+                   username.setText(null);
+                   password.setText(null);
+               }
             }
         });
     }
