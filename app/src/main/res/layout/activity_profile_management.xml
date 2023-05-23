@@ -20,7 +20,7 @@
     <EditText
         android:id="@+id/etUserNamePM"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="58dp"
         android:ems="10"
         android:hint="@string/userName"
         android:inputType="textPersonName" />
@@ -57,6 +57,7 @@
             android:id="@+id/radioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="@string/male" />
 
         <RadioButton
@@ -67,13 +68,13 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnAddPM"
         android:layout_width="match_parent"
         android:layout_height="58dp"
         android:text="@string/add" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnUpdatePM"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:text="@string/updateProfile" />
